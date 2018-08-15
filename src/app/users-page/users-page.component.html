@@ -1,0 +1,7 @@
+<h1>Creditshop Users</h1>
+<h2 *ngIf="clickedUser">Clicked on: {{clickedUser}}</h2>
+<ul [@listStagger]="users$">
+  <li *ngFor="let user of users$" [ngClass]="{'blue-border': clickedUser==user.name}">
+   <app-user [user]="user" (clickedWho)="userClicked($event)"></app-user>
+  </li>
+</ul>
