@@ -11,7 +11,7 @@ import {User} from "../objects/user";
 export class UserComponent implements OnInit {
 
   @Input()
-  private user: User;
+  public user: User;
 
   @Output()
   clickedWho: EventEmitter<string> = new EventEmitter<string>();

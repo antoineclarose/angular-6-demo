@@ -11,7 +11,7 @@ import {User} from "../objects/user";
 })
 export class DetailsComponent implements OnInit, OnDestroy {
 
-  private user$: User = new User();
+  public user$: User = new User();
   private routeSubscription: Subscription;
 
   constructor(private route: ActivatedRoute, private data: DataService) {
